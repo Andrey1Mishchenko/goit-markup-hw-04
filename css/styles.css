@@ -12,7 +12,7 @@
     --footer-social-bcg: rgba(255, 255, 255, 0.1);
     --filter-button-color: #f5f4fa;
     --examples-card-border: #eeeeee;
-    --clients-border: #afb1b8;
+    --icons-fill: #afb1b8;
 }
 
 /* глобальные стили */
@@ -132,11 +132,13 @@ h3 {
     text-decoration: none;
     padding-top: 32px;
     padding-bottom: 31px;
+    fill: currentColor;
 }
 
 .contacts-item .link:hover,
 .contacts-item .link:focus {
     color: var(--focus-color);
+    fill: currentColor;
 }
 
 .contacts-item svg {
@@ -213,11 +215,9 @@ h3 {
     margin-bottom: 20px;
 }
 
-.social-list-container .icons-list-item {
+.icons-list-item .footer-soc-link {
     background: var(--footer-social-bcg);
-}
-
-.social-list-container .icons-list-item:hover {
+    fill: var(--third-color);
 }
 /* стили для footer */
 
@@ -419,16 +419,15 @@ h3 {
 .icons-list-item {
     width: 44px;
     height: 44px;
-    background-color: inherit;
-    border-radius: 50%;
 }
 
 .icons-list-item a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
+    border-radius: 50%;
+    fill: #afb1b8;
 }
 
 .icons-list-item svg {
@@ -439,8 +438,10 @@ h3 {
     margin-right: 10px;
 }
 
-.icons-list-item:hover {
+.icons-list-item a:hover,
+.icons-list-item a:focus {
     background-color: var(--focus-color);
+    fill: var(--third-color);
 }
 
 /* team section */
@@ -453,11 +454,6 @@ h3 {
 .clients-list-item {
     flex-basis: calc((100% - 150px) / 6);
     height: 92px;
-    /* border: 1px solid var(--clients-border);
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .clients-list-item:not(:last-child) {
@@ -469,12 +465,15 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 100%;
-    border: 1px solid var(--clients-border);
+    border: 1px solid var(--icons-fill);
     border-radius: 4px;
+    fill: var(--icons-fill);
 }
 
-.clients-list-item a:hover {
+.clients-list-item a:hover,
+.clients-list-item a:focus {
     border: 1px solid var(--focus-color);
+    fill: var(--focus-color);
 }
 
 .clients-list-item svg {
@@ -508,6 +507,8 @@ h3 {
 .filter-button-list-item .button:focus {
     background: var(--focus-color);
     color: var(--third-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* filter-button-list */
 
@@ -524,6 +525,12 @@ h3 {
     flex-basis: calc(100% / 3 - 30px);
     margin-left: 30px;
     margin-top: 30px;
+}
+
+.examples-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 
 .examples-card-pic > img {
